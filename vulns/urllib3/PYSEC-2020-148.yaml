@@ -1,0 +1,28 @@
+id: PYSEC-2020-148
+package:
+  name: urllib3
+  ecosystem: PyPI
+summary: Vulnerability in urllib3
+details: 'urllib3 before 1.25.9 allows CRLF injection if the attacker controls the
+  HTTP request method, as demonstrated by inserting CR and LF control characters in
+  the first argument of putrequest(). NOTE: this is similar to CVE-2020-26116.'
+affects:
+  ranges:
+  - type: GIT
+    repo: https://github.com/urllib3/urllib3
+    fixed: 1dd69c5c5982fae7c87a620d487c2ebf7a6b436b
+  - type: ECOSYSTEM
+    fixed: 1.25.9
+references:
+- type: WEB
+  url: https://bugs.python.org/issue39603
+- type: WEB
+  url: https://github.com/urllib3/urllib3/commit/1dd69c5c5982fae7c87a620d487c2ebf7a6b436b
+- type: WEB
+  url: https://github.com/urllib3/urllib3/pull/1800
+- type: WEB
+  url: https://usn.ubuntu.com/4570-1/
+aliases:
+- CVE-2020-26137
+modified: "2020-10-14T05:15:00Z"
+published: "2020-09-30T18:15:00Z"

@@ -1,0 +1,46 @@
+id: PYSEC-2020-34
+package:
+  name: django
+  ecosystem: PyPI
+summary: Vulnerability in django
+details: An issue was discovered in Django 2.2 before 2.2.16, 3.0 before 3.0.10, and
+  3.1 before 3.1.1 (when Python 3.7+ is used). The intermediate-level directories
+  of the filesystem cache had the system's standard umask rather than 0o077.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    introduced: "2.2"
+    fixed: 2.2.16
+  - type: ECOSYSTEM
+    introduced: "3.0"
+    fixed: 3.0.10
+  - type: ECOSYSTEM
+    introduced: "3.1"
+    fixed: 3.1.1
+references:
+- type: WEB
+  url: https://groups.google.com/forum/#!topic/django-announce/Gdqn58RqIDM
+- type: WEB
+  url: https://www.openwall.com/lists/oss-security/2020/09/01/2
+- type: WEB
+  url: https://groups.google.com/forum/#!topic/django-announce/zFCMdgUnutU
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2020/sep/01/security-releases/
+- type: WEB
+  url: https://docs.djangoproject.com/en/dev/releases/security/
+- type: WEB
+  url: https://usn.ubuntu.com/4479-1/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/F2ZHO3GZCJMP3DDTXCNVFV6ED3W64NAU/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZCRPQCBTV3RZHKVZ6K6QOAANPRZQD3GI/
+- type: WEB
+  url: https://security.netapp.com/advisory/ntap-20200918-0004/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/OLGFFLMF3X6USMJD7V5F5P4K2WVUTO3T/
+- type: WEB
+  url: https://www.oracle.com/security-alerts/cpujan2021.html
+aliases:
+- CVE-2020-24584
+modified: "2021-01-20T15:15:00Z"
+published: "2020-09-01T13:15:00Z"

@@ -1,0 +1,34 @@
+id: PYSEC-2021-6
+package:
+  name: django
+  ecosystem: PyPI
+summary: Vulnerability in django
+details: In Django 2.2 before 2.2.20, 3.0 before 3.0.14, and 3.1 before 3.1.8, MultiPartParser
+  allowed directory traversal via uploaded files with suitably crafted file names.
+  Built-in upload handlers were not affected by this vulnerability.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    introduced: "2.2"
+    fixed: 2.2.20
+  - type: ECOSYSTEM
+    introduced: "3.0"
+    fixed: 3.0.14
+  - type: ECOSYSTEM
+    introduced: "3.1"
+    fixed: 3.1.8
+references:
+- type: WEB
+  url: https://groups.google.com/g/django-announce/c/ePr5j-ngdPU
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2021/apr/06/security-releases/
+- type: WEB
+  url: https://docs.djangoproject.com/en/3.1/releases/security/
+- type: WEB
+  url: https://lists.debian.org/debian-lts-announce/2021/04/msg00008.html
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/ZVKYPHR3TKR2ESWXBPOJEKRO2OSJRZUE/
+aliases:
+- CVE-2021-28658
+modified: "2021-05-12T08:15:00Z"
+published: "2021-04-06T15:15:00Z"

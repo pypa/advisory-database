@@ -1,0 +1,18 @@
+id: PYSEC-2021-62
+package:
+  name: cryptography
+  ecosystem: PyPI
+summary: Vulnerability in cryptography
+details: python-cryptography 3.2 is vulnerable to Bleichenbacher timing attacks in
+  the RSA decryption API, via timed processing of valid PKCS#1 v1.5 ciphertext.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    fixed: 3.2.1
+references:
+- type: WEB
+  url: https://github.com/pyca/cryptography/pull/5507/commits/ce1bef6f1ee06ac497ca0c837fbd1c7ef6c2472b
+aliases:
+- CVE-2020-25659
+modified: "2021-01-19T21:48:00Z"
+published: "2021-01-11T16:15:00Z"

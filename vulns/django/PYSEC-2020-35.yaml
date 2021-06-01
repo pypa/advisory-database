@@ -1,0 +1,53 @@
+id: PYSEC-2020-35
+package:
+  name: django
+  ecosystem: PyPI
+summary: Vulnerability in django
+details: Django 1.11 before 1.11.28, 2.2 before 2.2.10, and 3.0 before 3.0.3 allows
+  SQL Injection if untrusted data is used as a StringAgg delimiter (e.g., in Django
+  applications that offer downloads of data as a series of rows with a user-specified
+  column delimiter). By passing a suitably crafted delimiter to a contrib.postgres.aggregates.StringAgg
+  instance, it was possible to break escaping and inject malicious SQL.
+affects:
+  ranges:
+  - type: GIT
+    repo: https://github.com/django/django
+    fixed: eb31d845323618d688ad429479c6dda973056136
+  - type: ECOSYSTEM
+    introduced: "1.11"
+    fixed: 1.11.28
+  - type: ECOSYSTEM
+    introduced: "2.2"
+    fixed: 2.2.10
+  - type: ECOSYSTEM
+    introduced: "3.0"
+    fixed: 3.0.3
+references:
+- type: WEB
+  url: https://www.openwall.com/lists/oss-security/2020/02/03/1
+- type: WEB
+  url: https://docs.djangoproject.com/en/3.0/releases/security/
+- type: WEB
+  url: https://groups.google.com/forum/#!topic/django-announce/X45S86X5bZI
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2020/feb/03/security-releases/
+- type: WEB
+  url: http://www.openwall.com/lists/oss-security/2020/02/03/1
+- type: WEB
+  url: https://github.com/django/django/commit/eb31d845323618d688ad429479c6dda973056136
+- type: WEB
+  url: https://usn.ubuntu.com/4264-1/
+- type: WEB
+  url: https://seclists.org/bugtraq/2020/Feb/30
+- type: WEB
+  url: https://www.debian.org/security/2020/dsa-4629
+- type: WEB
+  url: https://security.netapp.com/advisory/ntap-20200221-0006/
+- type: WEB
+  url: https://security.gentoo.org/glsa/202004-17
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/4A2AP4T7RKPBCLTI2NNQG3T6MINDUUMZ/
+aliases:
+- CVE-2020-7471
+modified: "2020-06-19T03:15:00Z"
+published: "2020-02-03T12:15:00Z"

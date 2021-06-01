@@ -1,0 +1,46 @@
+id: PYSEC-2019-83
+package:
+  name: django
+  ecosystem: PyPI
+summary: Vulnerability in django
+details: An issue was discovered in Django 1.11.x before 1.11.23, 2.1.x before 2.1.11,
+  and 2.2.x before 2.2.4. Due to an error in shallow key transformation, key and index
+  lookups for django.contrib.postgres.fields.JSONField, and key lookups for django.contrib.postgres.fields.HStoreField,
+  were subject to SQL injection. This could, for example, be exploited via crafted
+  use of "OR 1=1" in a key or index name to return all records, using a suitably crafted
+  dictionary, with dictionary expansion, as the **kwargs passed to the QuerySet.filter()
+  function.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    introduced: "2.1"
+    fixed: 2.1.11
+  - type: ECOSYSTEM
+    introduced: "1.11"
+    fixed: 1.11.23
+  - type: ECOSYSTEM
+    introduced: "2.2"
+    fixed: 2.2.4
+references:
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2019/aug/01/security-releases/
+- type: WEB
+  url: https://docs.djangoproject.com/en/dev/releases/security/
+- type: WEB
+  url: https://groups.google.com/forum/#!topic/django-announce/jIoju2-KLDs
+- type: WEB
+  url: https://seclists.org/bugtraq/2019/Aug/15
+- type: WEB
+  url: https://www.debian.org/security/2019/dsa-4498
+- type: WEB
+  url: http://lists.opensuse.org/opensuse-security-announce/2019-08/msg00025.html
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/STVX7X7IDWAH5SKE6MBMY3TEI6ZODBTK/
+- type: WEB
+  url: https://security.netapp.com/advisory/ntap-20190828-0002/
+- type: WEB
+  url: https://security.gentoo.org/glsa/202004-17
+aliases:
+- CVE-2019-14234
+modified: "2019-08-28T13:15:00Z"
+published: "2019-08-09T13:15:00Z"

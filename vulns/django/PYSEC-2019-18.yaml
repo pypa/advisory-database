@@ -1,0 +1,44 @@
+id: PYSEC-2019-18
+package:
+  name: django
+  ecosystem: PyPI
+summary: Vulnerability in django
+details: Django 1.11.x before 1.11.19, 2.0.x before 2.0.11, and 2.1.x before 2.1.6
+  allows Uncontrolled Memory Consumption via a malicious attacker-supplied value to
+  the django.utils.numberformat.format() function.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    introduced: "1.11"
+    fixed: 1.11.19
+  - type: ECOSYSTEM
+    introduced: "2.0"
+    fixed: 2.0.12
+  - type: ECOSYSTEM
+    introduced: "2.1"
+    fixed: 2.1.7
+references:
+- type: WEB
+  url: https://www.openwall.com/lists/oss-security/2019/02/11/1
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2019/feb/11/security-releases/
+- type: WEB
+  url: https://groups.google.com/forum/#!topic/django-announce/WTwEAprR0IQ
+- type: WEB
+  url: https://docs.djangoproject.com/en/dev/releases/security/
+- type: WEB
+  url: http://www.securityfocus.com/bid/106964
+- type: WEB
+  url: https://usn.ubuntu.com/3890-1/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HVXDOVCXLD74SHR2BENGCE2OOYYYWJHZ/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/66WMXHGBXD7GSM3PEXVCMCAGLMQYHZCU/
+- type: WEB
+  url: https://www.debian.org/security/2019/dsa-4476
+- type: WEB
+  url: https://seclists.org/bugtraq/2019/Jul/10
+aliases:
+- CVE-2019-6975
+modified: "2020-08-24T17:37:00Z"
+published: "2019-02-11T13:29:00Z"

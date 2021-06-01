@@ -1,0 +1,43 @@
+id: PYSEC-2019-86
+package:
+  name: django
+  ecosystem: PyPI
+summary: Vulnerability in django
+details: Django before 1.11.27, 2.x before 2.2.9, and 3.x before 3.0.1 allows account
+  takeover. A suitably crafted email address (that is equal to an existing user's
+  email address after case transformation of Unicode characters) would allow an attacker
+  to be sent a password reset token for the matched user account. (One mitigation
+  in the new releases is to send password reset tokens only to the registered user
+  email address.)
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    fixed: 1.11.27
+  - type: ECOSYSTEM
+    introduced: "2.2"
+    fixed: 2.2.9
+references:
+- type: WEB
+  url: https://groups.google.com/forum/#!topic/django-announce/3oaB2rVH3a0
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2019/dec/18/security-releases/
+- type: WEB
+  url: https://docs.djangoproject.com/en/dev/releases/security/
+- type: WEB
+  url: https://usn.ubuntu.com/4224-1/
+- type: WEB
+  url: https://www.debian.org/security/2020/dsa-4598
+- type: WEB
+  url: https://seclists.org/bugtraq/2020/Jan/9
+- type: WEB
+  url: http://packetstormsecurity.com/files/155872/Django-Account-Hijack.html
+- type: WEB
+  url: https://security.netapp.com/advisory/ntap-20200110-0003/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/HCM2DPUI7TOZWN4A6JFQFUVQ2XGE7GUD/
+- type: WEB
+  url: https://security.gentoo.org/glsa/202004-17
+aliases:
+- CVE-2019-19844
+modified: "2020-01-08T04:15:00Z"
+published: "2019-12-18T19:15:00Z"
