@@ -1,0 +1,24 @@
+id: PYSEC-2018-20
+package:
+  name: privacyidea
+  ecosystem: PyPI
+details: privacyIDEA version 2.23.1 and earlier contains a Improper Input Validation
+  vulnerability in token validation api that can result in Denial-of-Service. This
+  attack appear to be exploitable via http request with user=<space>&pass= to /validate/check
+  url. This vulnerability appears to have been fixed in 2.23.2.
+affects:
+  ranges:
+  - type: GIT
+    repo: https://github.com/privacyidea/privacyidea
+    fixed: a3edc09beffa2104f357fe24971ea3211ce40751
+  - type: ECOSYSTEM
+    fixed: 2.23.2
+references:
+- type: WEB
+  url: https://github.com/privacyidea/privacyidea/issues/1227
+- type: WEB
+  url: https://github.com/privacyidea/privacyidea/commit/a3edc09beffa2104f357fe24971ea3211ce40751
+aliases:
+- CVE-2018-1000809
+modified: "2019-01-08T16:27:00Z"
+published: "2018-10-08T15:29:00Z"

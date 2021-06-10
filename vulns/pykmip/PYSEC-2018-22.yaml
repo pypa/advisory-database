@@ -1,0 +1,21 @@
+id: PYSEC-2018-22
+package:
+  name: pykmip
+  ecosystem: PyPI
+details: 'OpenKMIP PyKMIP version All versions before 0.8.0 contains a CWE 399: Resource
+  Management Errors (similar issue to CVE-2015-5262) vulnerability in PyKMIP server
+  that can result in DOS: the server can be made unavailable by one or more clients
+  opening all of the available sockets. This attack appear to be exploitable via A
+  client or clients open sockets with the server and then never close them. This vulnerability
+  appears to have been fixed in 0.8.0.'
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    fixed: 0.8.0
+references:
+- type: WEB
+  url: https://github.com/OpenKMIP/PyKMIP/issues/430
+aliases:
+- CVE-2018-1000872
+modified: "2019-10-03T00:03:00Z"
+published: "2018-12-20T17:29:00Z"

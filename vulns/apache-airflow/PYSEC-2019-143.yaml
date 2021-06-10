@@ -1,0 +1,18 @@
+id: PYSEC-2019-143
+package:
+  name: apache-airflow
+  ecosystem: PyPI
+details: The LDAP auth backend (airflow.contrib.auth.backends.ldap_auth) prior to
+  Apache Airflow 1.10.1 was misconfigured and contained improper checking of exceptions
+  which disabled server certificate checking.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    fixed: 1.10.1
+references:
+- type: WEB
+  url: https://lists.apache.org/thread.html/b549c7573b342a6e457e5a3225c33054244343927bbfb2a4cdc4cf73@%3Cdev.airflow.apache.org%3E
+aliases:
+- CVE-2018-20245
+modified: "2019-02-20T17:47:00Z"
+published: "2019-01-23T17:29:00Z"

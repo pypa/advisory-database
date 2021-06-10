@@ -1,0 +1,34 @@
+id: PYSEC-2018-7
+package:
+  name: django-anymail
+  ecosystem: PyPI
+details: webhooks/base.py in Anymail (aka django-anymail) before 1.2.1 is prone to
+  a timing attack vulnerability on the WEBHOOK_AUTHORIZATION secret, which allows
+  remote attackers to post arbitrary e-mail tracking events.
+affects:
+  ranges:
+  - type: GIT
+    repo: https://github.com/anymail/django-anymail
+    fixed: db586ede1fbb41dce21310ea28ae15a1cf1286c5
+  - type: GIT
+    repo: https://github.com/anymail/django-anymail
+    fixed: c07998304b4a31df4c61deddcb03d3607a04691b
+  - type: ECOSYSTEM
+    fixed: 1.2.1
+references:
+- type: WEB
+  url: https://github.com/anymail/django-anymail/releases/tag/v1.3
+- type: WEB
+  url: https://github.com/anymail/django-anymail/releases/tag/v1.2.1
+- type: WEB
+  url: https://github.com/anymail/django-anymail/commit/db586ede1fbb41dce21310ea28ae15a1cf1286c5
+- type: WEB
+  url: https://github.com/anymail/django-anymail/commit/c07998304b4a31df4c61deddcb03d3607a04691b
+- type: WEB
+  url: https://bugs.debian.org/889450
+- type: WEB
+  url: https://www.debian.org/security/2018/dsa-4107
+aliases:
+- CVE-2018-6596
+modified: "2018-03-02T13:56:00Z"
+published: "2018-02-03T21:29:00Z"

@@ -1,0 +1,21 @@
+id: PYSEC-2018-14
+package:
+  name: mayan-edms
+  ecosystem: PyPI
+details: An issue was discovered in Mayan EDMS before 3.0.2. The Cabinets app has
+  XSS via a crafted cabinet label.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    fixed: 3.0.2
+references:
+- type: WEB
+  url: https://gitlab.com/mayan-edms/mayan-edms/issues/495
+- type: WEB
+  url: https://gitlab.com/mayan-edms/mayan-edms/commit/48dfc06e49c7f773749e063f8cc69c95509d1c32
+- type: WEB
+  url: https://gitlab.com/mayan-edms/mayan-edms/blob/master/HISTORY.rst
+aliases:
+- CVE-2018-16406
+modified: "2018-10-30T19:46:00Z"
+published: "2018-09-03T19:29:00Z"

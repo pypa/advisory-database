@@ -1,0 +1,24 @@
+id: PYSEC-2018-4
+package:
+  name: django
+  ecosystem: PyPI
+details: django.contrib.auth.forms.AuthenticationForm in Django 2.0 before 2.0.2,
+  and 1.11.8 and 1.11.9, allows remote attackers to obtain potentially sensitive information
+  by leveraging data exposure from the confirm_login_allowed() method, as demonstrated
+  by discovering whether a user account is inactive.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    introduced: "2.0"
+    fixed: 2.0.2
+references:
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2018/feb/01/security-releases/
+- type: WEB
+  url: http://www.securitytracker.com/id/1040422
+- type: WEB
+  url: https://usn.ubuntu.com/3559-1/
+aliases:
+- CVE-2018-6188
+modified: "2019-03-12T17:54:00Z"
+published: "2018-02-05T03:29:00Z"

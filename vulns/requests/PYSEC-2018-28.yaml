@@ -1,0 +1,37 @@
+id: PYSEC-2018-28
+package:
+  name: requests
+  ecosystem: PyPI
+details: The Requests package before 2.20.0 for Python sends an HTTP Authorization
+  header to an http URI upon receiving a same-hostname https-to-http redirect, which
+  makes it easier for remote attackers to discover credentials by sniffing the network.
+affects:
+  ranges:
+  - type: GIT
+    repo: https://github.com/requests/requests
+    fixed: c45d7c49ea75133e52ab22a8e9e13173938e36ff
+  - type: ECOSYSTEM
+    fixed: 2.20.0
+references:
+- type: WEB
+  url: https://github.com/requests/requests/pull/4718
+- type: WEB
+  url: https://github.com/requests/requests/issues/4716
+- type: WEB
+  url: https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff
+- type: WEB
+  url: https://bugs.debian.org/910766
+- type: WEB
+  url: https://usn.ubuntu.com/3790-1/
+- type: WEB
+  url: http://docs.python-requests.org/en/master/community/updates/#release-and-version-history
+- type: WEB
+  url: https://usn.ubuntu.com/3790-2/
+- type: WEB
+  url: http://lists.opensuse.org/opensuse-security-announce/2019-07/msg00024.html
+- type: WEB
+  url: https://access.redhat.com/errata/RHSA-2019:2035
+aliases:
+- CVE-2018-18074
+modified: "2021-04-14T20:30:00Z"
+published: "2018-10-09T17:29:00Z"

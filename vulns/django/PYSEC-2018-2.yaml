@@ -1,0 +1,31 @@
+id: PYSEC-2018-2
+package:
+  name: django
+  ecosystem: PyPI
+details: django.middleware.common.CommonMiddleware in Django 1.11.x before 1.11.15
+  and 2.0.x before 2.0.8 has an Open Redirect.
+affects:
+  ranges:
+  - type: ECOSYSTEM
+    introduced: "2.0"
+    fixed: 2.0.8
+  - type: ECOSYSTEM
+    introduced: "1.11"
+    fixed: 1.11.15
+references:
+- type: WEB
+  url: https://www.djangoproject.com/weblog/2018/aug/01/security-releases/
+- type: WEB
+  url: https://usn.ubuntu.com/3726-1/
+- type: WEB
+  url: http://www.securitytracker.com/id/1041403
+- type: WEB
+  url: https://www.debian.org/security/2018/dsa-4264
+- type: WEB
+  url: http://www.securityfocus.com/bid/104970
+- type: WEB
+  url: https://access.redhat.com/errata/RHSA-2019:0265
+aliases:
+- CVE-2018-14574
+modified: "2019-03-01T19:32:00Z"
+published: "2018-08-03T17:29:00Z"
