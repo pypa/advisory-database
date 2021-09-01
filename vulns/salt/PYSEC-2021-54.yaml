@@ -1,55 +1,60 @@
 id: PYSEC-2021-54
-package:
-  name: salt
-  ecosystem: PyPI
 details: In SaltStack Salt before 3002.5, eauth tokens can be used once after expiration.
   (They might be used to run command against the salt master or minions.)
-affects:
+aliases:
+- CVE-2021-3144
+modified: '2021-03-31T14:15:00Z'
+published: '2021-02-27T05:15:00Z'
+references:
+- type: WEB
+  url: https://github.com/saltstack/salt/releases
+- type: WEB
+  url: https://saltproject.io/security_announcements/active-saltstack-cve-release-2021-feb-25/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YOGNT2XWPOYV7YT75DN7PS4GIYWFKOK5/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7GRVZ5WAEI3XFN2BDTL6DDXFS5HYSDVB/
+- type: WEB
+  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FUGLOJ6NXLCIFRD2JTXBYQEMAEF2B6XH/
+- type: WEB
+  url: https://security.gentoo.org/glsa/202103-01
+affected:
+- package:
+    name: salt
+    ecosystem: PyPI
   ranges:
   - type: ECOSYSTEM
-    fixed: 2015.8.10
-  - type: ECOSYSTEM
-    introduced: 2015.8.11
-    fixed: 2015.8.13
-  - type: ECOSYSTEM
-    introduced: 2016.3.0
-    fixed: 2016.3.4
-  - type: ECOSYSTEM
-    introduced: 2016.3.5
-    fixed: 2016.3.6
-  - type: ECOSYSTEM
-    introduced: 2016.3.7
-    fixed: 2016.3.8
-  - type: ECOSYSTEM
-    introduced: 2016.11.0
-    fixed: 2016.11.3
-  - type: ECOSYSTEM
-    introduced: 2016.11.4
-    fixed: 2016.11.5
-  - type: ECOSYSTEM
-    introduced: 2016.11.7
-    fixed: 2016.11.10
-  - type: ECOSYSTEM
-    introduced: 2017.7.0
-    fixed: 2017.7.8
-  - type: ECOSYSTEM
-    introduced: 2018.3.0rc1
-    fixed: 2019.2.0rc1
-  - type: ECOSYSTEM
-    introduced: 2019.2.0
-    fixed: 2019.2.5
-  - type: ECOSYSTEM
-    introduced: 2019.2.6
-    fixed: 2019.2.8
-  - type: ECOSYSTEM
-    introduced: '3000'
-    fixed: '3000.6'
-  - type: ECOSYSTEM
-    introduced: '3001'
-    fixed: '3001.4'
-  - type: ECOSYSTEM
-    introduced: '3002'
-    fixed: '3002.5'
+    events:
+    - introduced: '0'
+    - fixed: 2015.8.10
+    - introduced: 2015.8.11
+    - fixed: 2015.8.13
+    - introduced: 2016.3.0
+    - fixed: 2016.3.4
+    - introduced: 2016.3.5
+    - fixed: 2016.3.6
+    - introduced: 2016.3.7
+    - fixed: 2016.3.8
+    - introduced: 2016.11.0
+    - fixed: 2016.11.3
+    - introduced: 2016.11.4
+    - fixed: 2016.11.5
+    - introduced: 2016.11.7
+    - fixed: 2016.11.10
+    - introduced: 2017.7.0
+    - fixed: 2017.7.8
+    - introduced: 2018.3.0rc1
+    - fixed: 2019.2.0rc1
+    - introduced: 2019.2.0
+    - fixed: 2019.2.5
+    - introduced: 2019.2.6
+    - fixed: 2019.2.8
+    - introduced: '3000'
+    - fixed: '3000.6'
+    - introduced: '3001'
+    - fixed: '3001.4'
+    - introduced: '3002'
+    - fixed: '3002.5'
   versions:
   - 0.8.7
   - 0.8.9
@@ -210,20 +215,3 @@ affects:
   - '3002.2'
   - '3002.3'
   - '3002.4'
-aliases:
-- CVE-2021-3144
-modified: '2021-03-31T14:15:00Z'
-published: '2021-02-27T05:15:00Z'
-references:
-- type: WEB
-  url: https://github.com/saltstack/salt/releases
-- type: WEB
-  url: https://saltproject.io/security_announcements/active-saltstack-cve-release-2021-feb-25/
-- type: WEB
-  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/YOGNT2XWPOYV7YT75DN7PS4GIYWFKOK5/
-- type: WEB
-  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/7GRVZ5WAEI3XFN2BDTL6DDXFS5HYSDVB/
-- type: WEB
-  url: https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/FUGLOJ6NXLCIFRD2JTXBYQEMAEF2B6XH/
-- type: WEB
-  url: https://security.gentoo.org/glsa/202103-01
