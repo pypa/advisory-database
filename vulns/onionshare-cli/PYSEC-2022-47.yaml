@@ -1,0 +1,32 @@
+id: PYSEC-2022-47
+details: OnionShare is an open source tool that lets you securely and anonymously
+  share files, host websites, and chat with friends using the Tor network. In affected
+  versions it is possible to change the username to that of another chat participant
+  with an additional space character at the end of the name string. An adversary with
+  access to the chat environment can use the rename feature to impersonate other participants
+  by adding whitespace characters at the end of the username.
+affected:
+- package:
+    name: onionshare-cli
+    ecosystem: PyPI
+    purl: pkg:pypi/onionshare-cli
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+    - fixed: "2.5"
+  versions:
+  - "2.3"
+  - 2.3.1
+  - 2.3.2
+  - 2.3.3
+references:
+- type: ADVISORY
+  url: https://github.com/onionshare/onionshare/security/advisories/GHSA-68vr-8f46-vc9f
+- type: WEB
+  url: https://github.com/onionshare/onionshare/releases/tag/v2.5
+aliases:
+- CVE-2022-21696
+- GHSA-68vr-8f46-vc9f
+modified: "2022-03-09T00:16:43.504149Z"
+published: "2022-01-18T20:15:00Z"
