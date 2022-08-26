@@ -1,0 +1,22 @@
+id: PYSEC-2022-252
+details: 'The deep-translator project on PyPI was taken over via user account
+  compromise via a phishing attack and a new malicious release made which
+  contained code which some environment variables and downloaded and ran
+  malware at install time'
+affected:
+- package:
+    name: deep-translator
+    ecosystem: PyPI
+    purl: pkg:pypi/deep-translator
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: '1.8.5'
+  versions:
+    - '1.8.5'
+
+references:
+- type: ARTICLE
+  url: https://twitter.com/pypi/status/1562544091719958528
+modified: '2022-08-26T17:55:00.000000Z'
+published: '2022-08-26T17:55:00.000000Z'
