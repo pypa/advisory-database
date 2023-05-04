@@ -1,0 +1,205 @@
+id: PYSEC-2023-17
+details: IPython (Interactive Python) is a command shell for interactive computing
+  in multiple programming languages, originally developed for the Python programming
+  language. Versions prior to 8.1.0 are subject to a command injection vulnerability
+  with very specific prerequisites. This vulnerability requires that the function
+  `IPython.utils.terminal.set_term_title` be called on Windows in a Python environment
+  where ctypes is not available. The dependency on `ctypes` in `IPython.utils._process_win32`
+  prevents the vulnerable code from ever being reached in the ipython binary. However,
+  as a library that could be used by another tool `set_term_title` could be called
+  and hence introduce a vulnerability. Should an attacker get untrusted input to an
+  instance of this function they would be able to inject shell commands as current
+  process and limited to the scope of the current process. Users of ipython as a library
+  are advised to upgrade. Users unable to upgrade should ensure that any calls to
+  the `IPython.utils.terminal.set_term_title` function are done with trusted or filtered
+  input.
+affected:
+- package:
+    name: ipython
+    ecosystem: PyPI
+    purl: pkg:pypi/ipython
+  ranges:
+  - type: GIT
+    repo: https://github.com/ipython/ipython
+    events:
+    - introduced: "0"
+    - fixed: 385d69325319a5972ee9b5983638e3617f21cb1f
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+    - fixed: 8.10.0
+  versions:
+  - "0.10"
+  - 0.10.1
+  - 0.10.2
+  - "0.11"
+  - "0.12"
+  - 0.12.1
+  - "0.13"
+  - 0.13.1
+  - 0.13.2
+  - 0.6.10
+  - 0.6.11
+  - 0.6.12
+  - 0.6.13
+  - 0.6.14
+  - 0.6.15
+  - 0.6.4
+  - 0.6.5
+  - 0.6.6
+  - 0.6.7
+  - 0.6.8
+  - 0.6.9
+  - 0.7.0
+  - 0.7.1
+  - 0.7.1.fix1
+  - 0.7.2
+  - 0.7.3
+  - 0.7.4.svn.r2010
+  - 0.8.0
+  - 0.8.1
+  - 0.8.2
+  - 0.8.3
+  - 0.8.4
+  - "0.9"
+  - 0.9.1
+  - 1.0.0
+  - 1.1.0
+  - 1.2.0
+  - 1.2.1
+  - 2.0.0
+  - 2.1.0
+  - 2.2.0
+  - 2.3.0
+  - 2.3.1
+  - 2.4.0
+  - 2.4.1
+  - 3.0.0
+  - 3.1.0
+  - 3.2.0
+  - 3.2.1
+  - 3.2.2
+  - 3.2.3
+  - 4.0.0
+  - 4.0.0-b1
+  - 4.0.0b1
+  - 4.0.1
+  - 4.0.2
+  - 4.0.3
+  - 4.1.0
+  - 4.1.0rc1
+  - 4.1.0rc2
+  - 4.1.1
+  - 4.1.2
+  - 4.2.0
+  - 4.2.1
+  - 5.0.0
+  - 5.0.0b1
+  - 5.0.0b2
+  - 5.0.0b3
+  - 5.0.0b4
+  - 5.0.0rc1
+  - 5.1.0
+  - 5.10.0
+  - 5.2.0
+  - 5.2.1
+  - 5.2.2
+  - 5.3.0
+  - 5.4.0
+  - 5.4.1
+  - 5.5.0
+  - 5.6.0
+  - 5.7.0
+  - 5.8.0
+  - 5.9.0
+  - 6.0.0
+  - 6.0.0rc1
+  - 6.1.0
+  - 6.2.0
+  - 6.2.1
+  - 6.3.0
+  - 6.3.1
+  - 6.4.0
+  - 6.5.0
+  - 7.0.0
+  - 7.0.0b1
+  - 7.0.0rc1
+  - 7.0.1
+  - 7.1.0
+  - 7.1.1
+  - 7.10.0
+  - 7.10.1
+  - 7.10.2
+  - 7.11.0
+  - 7.11.1
+  - 7.12.0
+  - 7.13.0
+  - 7.14.0
+  - 7.15.0
+  - 7.16.0
+  - 7.16.1
+  - 7.16.2
+  - 7.16.3
+  - 7.17.0
+  - 7.18.0
+  - 7.18.1
+  - 7.19.0
+  - 7.2.0
+  - 7.20.0
+  - 7.21.0
+  - 7.22.0
+  - 7.23.0
+  - 7.23.1
+  - 7.24.0
+  - 7.24.1
+  - 7.25.0
+  - 7.26.0
+  - 7.27.0
+  - 7.28.0
+  - 7.29.0
+  - 7.3.0
+  - 7.30.0
+  - 7.30.1
+  - 7.31.0
+  - 7.31.1
+  - 7.32.0
+  - 7.33.0
+  - 7.34.0
+  - 7.4.0
+  - 7.5.0
+  - 7.6.0
+  - 7.6.1
+  - 7.7.0
+  - 7.8.0
+  - 7.9.0
+  - 8.0.0
+  - 8.0.0a1
+  - 8.0.0b1
+  - 8.0.0rc1
+  - 8.0.1
+  - 8.1.0
+  - 8.1.1
+  - 8.2.0
+  - 8.3.0
+  - 8.4.0
+  - 8.5.0
+  - 8.6.0
+  - 8.7.0
+  - 8.8.0
+  - 8.9.0
+references:
+- type: REPORT
+  url: https://github.com/ipython/ipython/blob/3f0bf05f072a91b2a3042d23ce250e5e906183fd/IPython/utils/terminal.py#L103-L117
+- type: FIX
+  url: https://github.com/ipython/ipython/commit/385d69325319a5972ee9b5983638e3617f21cb1f
+- type: EVIDENCE
+  url: https://github.com/ipython/ipython/security/advisories/GHSA-29gw-9793-fvw7
+- type: ADVISORY
+  url: https://github.com/ipython/ipython/security/advisories/GHSA-29gw-9793-fvw7
+- type: REPORT
+  url: https://github.com/ipython/ipython/blob/56e6925dfa50e2c7f4a6471547b8176275db7c25/IPython/utils/_process_win32.py#L20
+aliases:
+- CVE-2023-24816
+- GHSA-29gw-9793-fvw7
+modified: "2023-05-04T03:49:45.922825Z"
+published: "2023-02-10T20:15:00Z"
