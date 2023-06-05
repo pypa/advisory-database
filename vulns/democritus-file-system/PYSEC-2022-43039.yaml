@@ -1,0 +1,29 @@
+id: PYSEC-2022-43039
+details: The d8s-yaml package for Python, as distributed on PyPI, included a potential
+  code-execution backdoor inserted by a third party. The backdoor is the democritus-file-system
+  package. The affected version is 0.1.0.
+affected:
+- package:
+    name: democritus-file-system
+    ecosystem: PyPI
+    purl: pkg:pypi/democritus-file-system
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 2021.1.21
+  - 2021.1.27
+references:
+- type: PACKAGE
+  url: https://pypi.org/project/d8s-yaml/
+- type: EVIDENCE
+  url: https://github.com/democritus-project/d8s-yaml/issues/4
+- type: REPORT
+  url: https://github.com/democritus-project/d8s-yaml/issues/4
+- type: PACKAGE
+  url: https://pypi.org/project/democritus-file-system/
+aliases:
+- CVE-2022-41380
+modified: "2023-06-05T01:12:50.196757Z"
+published: "2022-10-11T22:15:00Z"

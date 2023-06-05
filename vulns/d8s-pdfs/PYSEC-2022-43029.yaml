@@ -1,0 +1,35 @@
+id: PYSEC-2022-43029
+details: The d8s-pdfs package for Python, as distributed on PyPI, included a potential
+  code-execution backdoor inserted by a third party. The backdoor is the democritus-urls
+  package. The affected version is 0.1.0.
+affected:
+- package:
+    name: d8s-pdfs
+    ecosystem: PyPI
+    purl: pkg:pypi/d8s-pdfs
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 0.1.0
+  - 0.2.0
+  - 0.3.0
+  - 0.4.0
+  - 0.4.1
+  - 0.4.2
+  - 0.5.0
+  - 0.6.0
+references:
+- type: PACKAGE
+  url: https://pypi.org/project/d8s-pdfs/
+- type: PACKAGE
+  url: https://pypi.org/project/democritus-urls/
+- type: EVIDENCE
+  url: https://github.com/democritus-project/d8s-pdfs/issues/7
+- type: REPORT
+  url: https://github.com/democritus-project/d8s-pdfs/issues/7
+aliases:
+- CVE-2022-41387
+modified: "2023-06-05T01:12:49.177857Z"
+published: "2022-10-11T22:15:00Z"

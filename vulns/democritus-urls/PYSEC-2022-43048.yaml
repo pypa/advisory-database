@@ -1,0 +1,30 @@
+id: PYSEC-2022-43048
+details: The d8s-html package for Python, as distributed on PyPI, included a potential
+  code-execution backdoor inserted by a third party. The backdoor is the democritus-urls
+  package. The affected version is 0.1.0.
+affected:
+- package:
+    name: democritus-urls
+    ecosystem: PyPI
+    purl: pkg:pypi/democritus-urls
+  ranges:
+  - type: ECOSYSTEM
+    events:
+    - introduced: "0"
+  versions:
+  - 2021.1.21
+  - 2021.1.21b0
+  - 2021.1.25
+references:
+- type: PACKAGE
+  url: https://pypi.org/project/d8s-html/
+- type: PACKAGE
+  url: https://pypi.org/project/democritus-urls/
+- type: EVIDENCE
+  url: https://github.com/democritus-project/d8s-html/issues/12
+- type: REPORT
+  url: https://github.com/democritus-project/d8s-html/issues/12
+aliases:
+- CVE-2022-41385
+modified: "2023-06-05T01:12:50.996077Z"
+published: "2022-10-11T22:15:00Z"
