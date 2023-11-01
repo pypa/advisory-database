@@ -1,0 +1,42 @@
+id: PYSEC-2023-220
+modified: 2023-11-01T18:30:02.084237Z
+published: 2023-10-25T18:17:00Z
+aliases:
+- CVE-2023-46128
+- GHSA-r2hw-74xv-4gqp
+details: |+
+  Nautobot is a Network Automation Platform built as a web application atop the Django Python framework with a PostgreSQL or MySQL database. In Nautobot 2.0.x, certain REST API endpoints, in combination with the `?depth=<N>` query parameter, can expose hashed user passwords as stored in the database to any authenticated user with access to these endpoints. The passwords are not exposed in plaintext. This vulnerability has been patched in version 2.0.3.
+
+affected:
+- package:
+    ecosystem: PyPI
+    name: nautobot
+    purl: pkg:pypi/nautobot
+  ranges:
+  - type: GIT
+    events:
+    - introduced: "0"
+    - fixed: 1ce8e5c658a075c29554d517cd453675e5d40d71
+    repo: https://github.com/nautobot/nautobot
+  - type: ECOSYSTEM
+    events:
+    - introduced: 2.0.0
+    - fixed: 2.0.3
+  versions:
+  - 2.0.0
+  - 2.0.1
+  - 2.0.2
+severity:
+- type: CVSS_V3
+  score: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
+references:
+- type: EVIDENCE
+  url: https://github.com/nautobot/nautobot/security/advisories/GHSA-r2hw-74xv-4gqp
+- type: FIX
+  url: https://github.com/nautobot/nautobot/security/advisories/GHSA-r2hw-74xv-4gqp
+- type: ADVISORY
+  url: https://github.com/nautobot/nautobot/security/advisories/GHSA-r2hw-74xv-4gqp
+- type: FIX
+  url: https://github.com/nautobot/nautobot/pull/4692
+- type: FIX
+  url: https://github.com/nautobot/nautobot/commit/1ce8e5c658a075c29554d517cd453675e5d40d71
